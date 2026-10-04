@@ -6,6 +6,8 @@ extracted strings translated and reviewed. Full gameplay QA remains pending.
 
 ![Dressmaker sewing screen in Hebrew](docs/images/hebrew-sewing-screen.png)
 
+![Rose dialogue in Hebrew](docs/images/hebrew-rose-dialogue.png)
+
 ## Setup
 
 Start with the **[step-by-step macOS setup guide](docs/SETUP.md)**. It covers
