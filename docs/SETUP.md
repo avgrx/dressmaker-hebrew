@@ -32,14 +32,14 @@ this clone already contains its own `adapter/backups/build-25508059/` originals.
 
 ## 2. Install the tools
 
-You need Git, Python 3.11 or newer, GitHub CLI, and the **.NET 9 SDK** (not just the
+You need Git, Python 3.11 or newer, and the **.NET 9 SDK** (not just the
 .NET runtime). These are build tools; they do not replace your game.
 
 If needed, install [Homebrew](https://brew.sh/) using its official instructions.
 Then install the command-line tools:
 
 ```sh
-brew install git python gh
+brew install git python
 ```
 
 Download and run the **macOS .NET 9 SDK installer** from
@@ -52,7 +52,6 @@ Verify the tools:
 ```sh
 python3 --version
 git --version
-gh --version
 dotnet --list-sdks
 ```
 
@@ -61,19 +60,13 @@ found, follow [Microsoft's macOS installation/troubleshooting guide](https://lea
 
 ## 3. Download this repository
 
-The repository is currently private. Your GitHub account needs access from its
-owner before you can clone it. Sign in as an account with access:
-
-```sh
-gh auth login --hostname github.com --git-protocol https --web
-```
-
-Complete the browser sign-in, then choose a folder for the project:
+The repository is public; no GitHub account or sign-in is required. Choose a
+folder for the project and download it:
 
 ```sh
 mkdir -p "$HOME/Projects"
 cd "$HOME/Projects"
-gh repo clone avgrx/dressmaker-hebrew
+git clone https://github.com/avgrx/dressmaker-hebrew.git
 cd dressmaker-hebrew
 ```
 
@@ -179,7 +172,7 @@ files and removes the added Hebrew files. Save files remain untouched.
 
 | Message or symptom | What to do |
 | --- | --- |
-| Repository not found / permission denied | Sign in to GitHub with an account that has access to this private repository. |
+| Repository not found / permission denied | Check that you used the exact public HTTPS clone URL in step 3 and that GitHub is reachable. |
 | `No module named UnityPy` | Activate `.venv` and run the dependency installation in step 4. |
 | SDK executable or `Patcher.dll` missing | Check `DRESSMAKER_DOTNET`, install the .NET 9 SDK, and run the first build command in step 5. |
 | `Game text changed`, a missing translation ID, or a pack coverage mismatch | Check the Steam build and whether the game is already patched. Use the original files for the tested build; do not bypass validation. |

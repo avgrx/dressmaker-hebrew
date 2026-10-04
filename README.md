@@ -21,7 +21,7 @@ permission distinction](docs/FAN_PROJECTS.md).
 ## Setup
 
 Start with the **[step-by-step macOS setup guide](docs/SETUP.md)**. It covers
-GitHub access, installing Python and .NET, checking the game version, building,
+downloading the repository, installing Python and .NET, checking the game version, building,
 installing, updating translations, and restoring English. There is no one-click
 installer yet: the adapter builds the patch from your own copy of the game.
 
@@ -37,6 +37,8 @@ installer yet: the adapter builds the patch from your own copy of the game.
 The translation pack contains no Unity assemblies, game bundles, original English
 text tables, saves, or backups. The adapter builds patched files from the player's
 own installed game. Generated game files and local backups are excluded from Git.
+Installation replaces local English text resources and patches the local TextMeshPro
+assembly. This differs from the French project's runtime language plugin.
 Translation updates currently require rebuilding and reinstalling; the game does
 not load this pack directly at runtime.
 
@@ -69,3 +71,18 @@ hardcoded strings are outside the extracted tables. Windows is not supported yet
 
 Font licenses are in `adapter/fonts/FONT-LICENSES.txt`. RTLTMPro's MIT license is
 in `adapter/vendor/RTLTMPro/LICENSE`. No original game binaries are distributed.
+
+## License and rights-holder requests
+
+Following the [French fan translation](https://github.com/Obero/dressmaker_fr),
+our adapter code is available under the [MIT license](adapter/LICENSE), and our
+licensable translation contributions under [CC BY-NC-SA 4.0](translation/LICENSE.md).
+Credit `avgrx` and this repository when sharing the translation, keep it
+noncommercial, and share adaptations under the same license. Third-party fonts
+and RTLTMPro retain their own licenses. See [the license scope](LICENSE.md).
+
+Developer permission has not been confirmed; these notices and community examples
+do not establish permission. For rights-holder concerns, contact the maintainer
+through [GitHub Issues](https://github.com/avgrx/dressmaker-hebrew/issues).
+We will withdraw distribution on a request from the game's rights holders, or if
+an official Hebrew localization is announced.

@@ -13,14 +13,18 @@ on the project authors' own READMEs, not an independent audit of their releases.
 The Dressmaker French project is the closest practical comparison. Its BepInEx
 plugin adds a language at runtime without rewriting game files. Our adapter
 currently rebuilds local English tables and patches the local TextMeshPro assembly;
-that technical difference should not be concealed in a permission request.
+this difference is disclosed in our README and setup guide.
 
 ## What we adopted
 
 The README now clearly identifies our project as unofficial, unaffiliated,
 noncommercial, and AI-assisted. It credits the game's rights holders, requires
 legitimate ownership, and explains that no game binaries or original English text
-tables are distributed. The translation pack remains separate from the adapter.
+tables are distributed. The translation pack remains separate from the adapter. We also follow the French
+project's split licenses: MIT for our adapter code and CC BY-NC-SA 4.0 for our
+licensable translation contributions, excluding rights in the original game.
+We offer a rights-holder contact route and commit to withdrawing distribution on
+request or an announcement of an official Hebrew localization.
 
 ## What these examples do not establish
 
@@ -38,5 +42,6 @@ not a policy governing Dressmaker, and cannot be borrowed as permission for it.
 [Steam Subscriber Agreement section 2.G](https://store.steampowered.com/subscriber_agreement/)
 contains default restrictions with exceptions for permissions and applicable law.
 We have not established an applicable exception or Dressmaker-specific permission.
-The repository therefore remains private pending a release decision; adding this
-notice should not be described as obtaining developer approval.
+The maintainer chose to publish under the same community standard as the French
+project. Publication and these notices must not be described as developer approval
+or legal clearance.
