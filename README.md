@@ -4,6 +4,16 @@ Unofficial Hebrew localization for the macOS Steam edition of Dressmaker, tested
 against build **25508059** (game version 410). This is a beta with all 5,886
 extracted strings translated and reviewed. Full gameplay QA remains pending.
 
+**Unofficial fan project:** this repository is not affiliated with, sponsored by,
+or endorsed by Cozy Lives, Free Lives, or Valve. It is intended as a free,
+noncommercial accessibility effort and requires a legitimately owned copy of
+Dressmaker. Rights in the original game, story, artwork, and screenshots remain
+with their respective owners; this project grants no rights to those materials.
+No game binaries or original English text tables are distributed here. The
+translation and tools were made with AI assistance and reviewed; they are not an
+official or professional localization. See [comparable fan projects and the
+permission distinction](docs/FAN_PROJECTS.md).
+
 ![Dressmaker sewing screen in Hebrew](docs/images/hebrew-sewing-screen.png)
 
 ![Rose dialogue in Hebrew](docs/images/hebrew-rose-dialogue.png)
