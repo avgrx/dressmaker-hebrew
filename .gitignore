@@ -1,0 +1,7 @@
+adapter/build/
+adapter/backups/
+**/bin/
+**/obj/
+**/__pycache__/
+.DS_Store
+.venv/

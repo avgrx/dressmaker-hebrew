@@ -1,0 +1,26 @@
+{
+  "format_version": 1,
+  "language": "he",
+  "display_name": "עברית",
+  "game": "Dressmaker",
+  "steam_app_id": "4019220",
+  "tested_build": "25508059",
+  "tables": {
+    "UI": {
+      "file": "UI_he.json",
+      "entries": 208
+    },
+    "Tutorial": {
+      "file": "Tutorial_he.json",
+      "entries": 71
+    },
+    "Content": {
+      "file": "Content_he.json",
+      "entries": 1930
+    },
+    "Dialogue": {
+      "file": "Dialogue_he.json",
+      "entries": 3677
+    }
+  }
+}
