@@ -4,6 +4,15 @@ Unofficial Hebrew localization for the macOS Steam edition of Dressmaker, tested
 against build **25508059** (game version 410). This is a beta with all 5,886
 extracted strings translated and reviewed. Full gameplay QA remains pending.
 
+![Dressmaker sewing screen in Hebrew](docs/images/hebrew-sewing-screen.png)
+
+## Setup
+
+Start with the **[step-by-step macOS setup guide](docs/SETUP.md)**. It covers
+GitHub access, installing Python and .NET, checking the game version, building,
+installing, updating translations, and restoring English. There is no one-click
+installer yet: the adapter builds the patch from your own copy of the game.
+
 ## Two separate parts
 
 - `translation/`: standalone UTF-8 Hebrew translation pack, keyed by game string
@@ -19,38 +28,21 @@ own installed game. Generated game files and local backups are excluded from Git
 Translation updates currently require rebuilding and reinstalling; the game does
 not load this pack directly at runtime.
 
-## Developer build on macOS
+## Build and install at a glance
 
-The existing scripts target the default Steam installation directory. Python 3
-with `adapter/requirements.txt` and the .NET 9 SDK are required. Set
-`DRESSMAKER_DOTNET` to your .NET SDK root (the directory containing `dotnet` and
-`sdk/`); the development fallback is `/tmp/dressmaker-dotnet`.
-
-Use a clean installation of Steam build 25508059 for the first build. Never apply
-these generated files to another game build. If already patched, the build needs
-this adapter's local `backups/build-25508059/` originals.
+After completing the prerequisites in [the setup guide](docs/SETUP.md), run these
+from the repository directory with Dressmaker closed:
 
 ```sh
-python3 -m pip install -r adapter/requirements.txt
-dotnet build adapter/Patcher/Patcher.csproj -o adapter/build/patcher
-python3 adapter/build.py
+source .venv/bin/activate
+"$DRESSMAKER_DOTNET/dotnet" build adapter/Patcher/Patcher.csproj -o adapter/build/patcher
+python adapter/build.py
+python adapter/install.py
 ```
 
-To build another compatible translation pack, set `DRESSMAKER_TRANSLATION_PACK`
-to its directory. The builder validates source hashes, IDs, markup, placeholders,
-and reads all translated values back from the generated bundle.
-
-Close Dressmaker before installation or removal:
-
-```sh
-python3 adapter/install.py
-python3 adapter/install.py restore
-```
-
-Run only the command for the action you want. Keep the game's language set to
-**English** after installation. The installer verifies backups and installed
-hashes and does not modify saves. Restore returns the original English files.
-Steam updates may replace the patch; a new build requires adapter validation.
+Keep the game's language set to **English**. To uninstall, close the game and run
+`python adapter/install.py restore` from the same repository and virtual environment.
+Keep `adapter/backups/` so the installer can restore your original files.
 
 ## Status and third-party licenses
 
